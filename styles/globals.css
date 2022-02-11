@@ -1,16 +1,43 @@
-html,
-body {
-  padding: 0;
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+.cube {
+	height: 200PX;
+	text-align: center;
+
+	-webkit-transition: -webkit-transform 0.33s;
+	transition: transform 0.33s; /* Animate the transform properties */
+
+	-webkit-transform-style: preserve-3d;
+	transform-style: preserve-3d; /* <-NB */
 }
 
-a {
-  color: inherit;
-  text-decoration: none;
+/* The two faces of the cube */
+.flippety,.flop {
+	background: rgb(247, 247, 247);
+	border: 1px solid rgba(147, 184, 189, .8);
+
+	-webkit-border-radius: 5px;
+	border-radius: 5px;
+
+	-webkit-box-shadow: 0 5px 20px rgba(105, 108, 109, .3), 0 0 8px 5px rgba(208, 223, 226, .4) inset;
+	box-shadow: 0 5px 20px rgba(105, 108, 109, .3), 0 0 8px 5px rgba(208, 223, 226, .4) inset;
+	height: 200px;
 }
 
-* {
-  box-sizing: border-box;
+/* Position the faces */
+.flippety {
+	-webkit-transform: translateZ(100px);
+	transform: translateZ(100px);
+}
+
+.flop {
+	-webkit-transform: rotateX(-90deg) translateZ(-100px);
+	transform: rotateX(-90deg) translateZ(-100px);
+}
+
+/* Rotate the cube */
+.cube:hover {
+	-webkit-transform: rotateX(90deg);
+	transform: rotateX(90deg); /* Text bleed at 90º */
 }
