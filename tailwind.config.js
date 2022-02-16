@@ -5,6 +5,9 @@ module.exports = {
   ],
   theme: {
     extend: {
+      fontFamily: {
+        'fo': ['"Shadows Into Light"', 'cursive']
+      },
       colors : {
         thatpurple : '#7f5af0',
         thatwhite : '#fffffe',
