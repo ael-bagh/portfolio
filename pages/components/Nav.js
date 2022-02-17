@@ -3,10 +3,10 @@ import {BsGithub,BsLinkedin,BsArrowDown} from 'react-icons/bs';
 
 export default function Nav(){
     return (
-        <div className="flex flex-col w-28 h-screen sticky top-0 bg-darkbg justify-between items-center">
+        <div className="flex flex-col w-20 h-screen sticky top-0 bg-darkbg justify-between items-center">
           <div className="p-1">
           </div>
-          <div className="flex flex-col justify-items-center items-center text-thatwhite gap-10">
+          <div className="flex flex-col justify-items-center items-center text-thatwhite gap-6">
             <div>About</div> 
             <div>Adventure</div>
           </div>
